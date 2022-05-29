@@ -1,0 +1,185 @@
+<ion-header class="ion-no-border ; header-bg-img">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <ion-buttons slot="start">
+                <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+            </ion-buttons>
+        </div>
+
+        <div>
+            <ion-icon name="ellipsis-vertical" style="font-size: 1.8rem;
+            color: white;"></ion-icon>
+        </div>
+
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <H6 style="
+        font-family: Fredoka_One;
+    font-size: 25px;
+    color: #FBFBFB;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px #3f48ed;
+    margin: 0px 10px 0px 12px;">Physics</H6>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex;
+        align-items: center;">
+            <img src="../../assets/image/study-grp-mem.png" alt="" style="height: 25px;
+            margin: 0px 10px 0px 10px;"> <span style="color: white;
+    font-family: 'PT_Sans_Regular';
+    font-size: 12px;"> {{this.GroupChat?.length}} members </span>
+        </div>
+
+        <div>
+            <img src="../../assets/image/study-grp-search.png" alt="" style="height: 37px;
+            margin: 0px 20px 0px 10px;">
+        </div>
+    </div>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <div>
+
+            <div style="display: flex;
+        justify-content: center;
+        align-items: baseline;">
+
+                <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25%;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 25px;
+            position: relative;
+            top: 30px;
+            left: 20px;">
+                    <div style="justify-content: center;
+            padding: 10px 0px 0px 0px;
+            display: flex;">
+
+                        <div style="height: 120px;
+            width: 120px;
+            border: 1px solid #429bddb0;
+            padding: 4.1px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 0px #429bddab;">
+
+                            <div style="height: 110px;
+width: 110px;
+border: 1px solid #429bddb0;
+padding: 4.1px;
+border-radius: 50%;
+box-shadow: 0px 0px 7px 0px #429bddab;">
+
+                                <img src="../../assets/image/Sample_Images/11.jpeg" alt="" style="height: 100px;
+                        width: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        box-shadow: 0px 0px 20px 5px #429cddb8;">
+                            </div>
+
+                        </div>
+                    </div>
+                    <img src="../../assets/image/img1.png" alt="" style="height: 25px;" style="height: 25px;
+            position: relative;
+            top: 45px;
+            right: 5px;">
+
+                </div>
+
+                <img src="../../assets/image/img1.png" alt="" style="height: 75px;
+            width: 75px;">
+
+            </div>
+            <p style="color: black;
+                font-family: 'Fredoka_One';
+                font-size: 20px;
+                text-align: center;
+                margin: 5px;">John Michael</p>
+        </div>
+
+        <div style="display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;">
+
+            <div *ngFor="let g of GroupChat; let i = index;">
+
+                <div style="display: flex;
+        justify-content: center;
+        align-items: baseline;">
+
+                    <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            ">
+                        <img src="../../assets/image/img1.png" alt="" style="height: 25px;
+            position: relative;
+            top: 30px;
+            left: 20px;">
+                        <div style="justify-content: center;
+            padding: 10px 0px 0px 0px;
+            display: flex;">
+
+                            <!-- <div style="height: 120px;
+            width: 120px;
+            border: 1px solid #429bddb0;
+            padding: 4.1px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 0px #429bddab;"> -->
+
+                            <!-- <div style="height: 110px;
+width: 110px;
+border: 1px solid #429bddb0;
+padding: 4.1px;
+border-radius: 50%;
+box-shadow: 0px 0px 7px 0px #429bddab;"> -->
+
+                            <img [src]="g.profile_pic" alt="" style="height: 75px;
+                            width: 75px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 1px solid grey;" (click)="toViewUser(g, i)">
+                            <!-- </div> -->
+
+                            <!-- </div> -->
+                        </div>
+                        <img src="../../assets/image/img1.png" alt="" style="height: 25px;" style="height: 23px;
+                        position: relative;
+                        top: 33px;
+                        right: 5px;">
+
+                    </div>
+
+                    <!-- <img src="../../assets/image/img1.png" alt="" style="height: 75px;
+            width: 75px;"> -->
+
+                </div>
+                <p style="color: black;
+                font-family: Fredoka_One;
+                font-size: 14px;
+                text-align: center;
+                margin: 7px;"> {{g.user_name}} </p>
+            </div>
+
+            <div style="display: flex;
+            align-items: center;
+            justify-content: center;">
+                <img src="../../assets/image/img1.png" alt="" style="height: 80px;
+                width: 80px;
+                margin: 0px 0px 0px 15px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid grey;">
+            </div>
+
+        </div>
+
+
+    </div>
+
+</ion-content>

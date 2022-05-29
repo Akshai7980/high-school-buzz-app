@@ -1,0 +1,169 @@
+<ion-header class="ion-no-border">
+    <div>
+        <ion-buttons>
+            <ion-menu-button>
+                <img src="../../assets/image/tog-menu-icn.png" alt="">
+            </ion-menu-button>
+        </ion-buttons>
+        <div style="position: relative;
+      bottom: 20px;
+      left: 30px;" *ngIf="UserDetails!==''">
+            <div style="display: flex;
+          justify-content: space-between;
+          position: relative;
+          margin-bottom: 5px;
+          padding: 0px 35px 0px 25px;
+          align-items: center;">
+                <div>
+                    <H5 style="color: white; font-family: Fredoka_One; margin: 0px;"> {{UserDetails[0].user_name}} </H5>
+                    <p style="color: white; font-size: 12px; font-family: 'PT_Sans_Regular'; margin: 0px;"> <strong> {{UserDetails[0].standard}},</strong> {{UserDetails[0].school_name}} </p>
+                </div>
+                <div>
+                    <img [src]="UserDetails[0].profile_pic" alt="" style="height: 55px;
+                  width: 55px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  border: 2px solid white;">
+                </div>
+            </div>
+
+            <div style="display: flex;
+          position: relative;
+          justify-content: center;">
+                <img src="../../assets/image/msg1.png" alt="" style="height: 60px;
+                width: 60px;
+                position: absolute;
+                left: 5px;">
+                <div style="text-align: center; border-right: .5px solid white; padding: 0px 5px 0px 5px;">
+                    <p style="margin: 0px;
+                  color: white;
+                  font-family: PT_sans_Bold;
+                  font-size: 14px;"> {{UserDetails[0].buzz_created}} </p>
+                    <p style="margin: 0px;
+                  font-size: 12px;
+                  color: white;
+                  font-family: 'PT_Sans_Regular';"> Buzz Created </p>
+                </div>
+
+                <div style="text-align: center; border-right: .5px solid white; padding: 0px 5px 0px 5px;">
+                    <p style="margin: 0px;
+                  color: white;
+                  font-family: PT_sans_Bold;
+                  font-size: 14px;"> {{UserDetails[0].likes}} </p>
+                    <p style="margin: 0px;
+                  font-size: 12px;
+                  color: white;
+                  font-family: 'PT_Sans_Regular';"> Likes </p>
+                </div>
+
+                <div style="text-align: center; border-right: .5px solid white; padding: 0px 5px 0px 5px;">
+                    <p style="margin: 0px;
+                  color: white;
+                  font-family: PT_sans_Bold;
+                  font-size: 14px;"> {{UserDetails[0].commentators}} </p>
+                    <p style="margin: 0px;
+                  font-size: 12px;
+                  color: white;
+                  font-family: 'PT_Sans_Regular';"> Commentators </p>
+                </div>
+
+                <div style="text-align: center; padding: 0px 5px 0px 5px;">
+                    <p style="margin: 0px;
+                  color: white;
+                  font-family: PT_sans_Bold;
+                  font-size: 14px;"> {{UserDetails[0].comments}} </p>
+                    <p style="margin: 0px;
+                  font-size: 12px;
+                  color: white;
+                  font-family: 'PT_Sans_Regular';"> Comments </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</ion-header>
+
+<ion-content>
+
+    <H4 style="margin: 10px 20px;
+  font-family: 'Fredoka_One';
+  color: #00ADEF;">Latest Buzz</H4>
+
+    <div style="display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0.5px solid lightgrey;
+  padding: 5px 0px 10px 10px;" *ngFor="let buzz of OngoingBuzz; let i=index;">
+
+        <div>
+            <div style="display: flex;">
+                <img [src]="buzz.image1" alt="" style="height: 60px;
+              width: 60px;
+              border-radius: 30px 0px 0px 0px;
+              object-fit: cover;">
+                <img [src]="buzz.image2" alt="" style="height: 60px;
+              width: 60px;
+              border-radius: 0px 30px 0px 0px;
+              object-fit: cover;">
+            </div>
+
+            <div style="display: flex;">
+                <img [src]="buzz.image3" alt="" style="height: 60px;
+              width: 60px;
+              border-radius: 0px 0px 0px 30px;
+              object-fit: cover;">
+                <img [src]="buzz.image4" alt="" style="height: 60px;
+              width: 60px;
+              border-radius: 0px 0px 30px 0px;
+              object-fit: cover;">
+            </div>
+        </div>
+
+        <div style="margin-left: 10%;">
+            <H4 style="font-family: 'Fredoka_One';
+          color: #f24aa2;
+          margin: 7px 0px 12px 0px;
+          font-size: 16px;"> {{buzz.caption}} </H4>
+            <div style="display: flex;
+          margin: 10px 0px 10px 0px;
+          font-family: PT_Sans_Regular;
+          font-size: 10px;
+          background-color: #DDF4FC;
+          width: 115px;
+          height: 27px;
+          justify-content: center;
+          border-radius: 20px;">
+                <img src="../../assets/image//img1.png" alt="" style="height: 15px;
+              position: relative;
+              top: 5px;
+              margin-right: 5px;">
+                <p style="position: relative;
+              bottom: 3px;">Ends {{buzz.ending_time}}</p>
+            </div>
+
+            <div style="display: flex;">
+                <img src="../../assets/image/img1.png" alt="" style="height: 20px;
+              width: 20px;
+              margin-right: 3px;"> <span style="font-size: 12px;
+  margin-right: 7px; position: relative;
+  top: 3px;"> {{buzz.like}} </span>
+                <img src="../../assets/image/img1.png" alt="" style="height: 20px;
+              width: 20px;
+              margin-right: 3px;
+              margin-left: 25px;"> <span style="font-size: 12px;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;"> {{buzz.comment}} </span>
+            </div>
+
+        </div>
+
+        <div>
+            <ion-icon name="chevron-forward" style="font-size: 1.5rem;
+          position: relative;
+          top: 40%;
+          color: #3bb2ec;"></ion-icon>
+        </div>
+
+    </div>
+</ion-content>

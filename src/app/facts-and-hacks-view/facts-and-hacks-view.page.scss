@@ -1,0 +1,97 @@
+ion-content {
+    --background: linear-gradient(to right, #8a84ca, #9b94d2);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 15px;
+    background-repeat: round;
+    font-family: Fredoka_One;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    float: left;
+    letter-spacing: .5px;
+}
+
+.add-button {
+    text-transform: none;
+    float: right;
+    font-family: 'Fredoka_One';
+    --background: linear-gradient(to bottom, #F779BB 10%, #F14CA4 70%);
+    width: 80px;
+    position: relative;
+    top: 10px;
+}
+
+.add-button-icon {
+    font-size: 20px;
+}
+
+.looping-container {
+    display: flex;
+    padding: 7px;
+    margin-top: 15px;
+    justify-content: space-between;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px 3px lightgrey;
+}
+
+.main-img-container {
+    margin-right: 7px;
+}
+
+.main-img {
+    height: 75px;
+    width: 95px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.heading-text {
+    margin: 0px 0px 10px 0px;
+}
+
+.profile-details-main-container {
+    display: flex;
+}
+
+.profile-details-first-sub-container {
+    margin-right: 8px;
+}
+
+.user-profile-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details-text-container {
+    font-size: 11px;
+    letter-spacing: .5px;
+    margin-top: 5px;
+}
+
+.user-name-text {
+    margin: 0px;
+}
+
+.user-school-name {
+    margin: 0px;
+    color: #343434;
+    font-size: 10px;
+}
+
+.chevron-forward-icon {
+    font-size: 1.7rem;
+    color: #0898FB;
+    position: relative;
+    top: 35%;
+}

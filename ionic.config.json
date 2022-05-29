@@ -1,0 +1,7 @@
+{
+  "name": "HighSchoolBuzz",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>FAQ</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+        <div style="justify-content: space-between; display:flex; border-bottom: .1px solid lightgray; padding-bottom: 10px;">
+            <ion-button fill="clear" class="inactive-button" (click)="gotoSections('all')">All</ion-button>
+            <ion-button fill="clear" class="inactive-button" (click)="gotoSections('school')">School</ion-button>
+            <ion-button class="active-button" (click)="gotoSections('media')">Media</ion-button>
+            <ion-button fill="clear" class="inactive-button" (click)="gotoSections('other')">Other</ion-button>
+        </div>
+
+        <!-- <ion-list>
+            <ion-item class="ion-activatable ripple-parent" *ngFor="let question of Questions; let i = index;" (click)="ToViewAnswer(question, i)">
+                <p> {{question.question}} </p>
+                <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+                <ion-ripple-effect type="bounded"></ion-ripple-effect> -->
+
+        <!-- <ion-item-divider>
+                    <ion-item *ngIf="showAnswer[i]">
+                        <p> {{question.answer}} </p>
+                    </ion-item>
+                </ion-item-divider> -->
+
+        <!-- </ion-item>
+        </ion-list> -->
+
+        <div *ngFor="let question of Questions; let i = index;" (click)="ToViewAnswer(question, i)">
+            <div class="question-container">
+                <p> {{question.question}} </p>
+                <ion-icon *ngIf="!showAnswer[i]" name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+                <ion-icon *ngIf="showAnswer[i]" name="chevron-down-outline" class="arrow-icon"></ion-icon>
+            </div>
+
+            <div *ngIf="showAnswer[i]">
+                <p class="answer-text"> {{question.answer}} </p>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

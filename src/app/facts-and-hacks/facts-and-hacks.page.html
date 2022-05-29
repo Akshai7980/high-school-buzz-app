@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Facts and Hacks</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+        <h4>Add Facts and Hacks</h4>
+        <ion-card>
+
+            <ion-item lines="none">
+                <ion-input placeholder="Title"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-input placeholder="DD/MM"></ion-input>
+                <ion-icon name="calendar-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <p>Attach File</p>
+
+            <div class="media-icons-container">
+                <ion-icon name="calendar-outline" class="media-icons"></ion-icon>
+                <ion-icon name="calendar-outline" class="media-icons"></ion-icon>
+                <ion-icon name="calendar-outline" class="media-icons"></ion-icon>
+            </div>
+
+            <div class="upload-container">
+                <ion-icon name="document-attach-outline" class="paper-clip-icon"></ion-icon>
+            </div>
+
+            <div style="text-align: center;">
+                <ion-button class="submit-button" shape="round">SUBMIT</ion-button>
+            </div>
+
+        </ion-card>
+    </div>
+
+</ion-content>

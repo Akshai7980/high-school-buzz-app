@@ -1,0 +1,80 @@
+ion-content {
+    --background: linear-gradient(to right, #8a84ca, #9b94d2);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 20px;
+}
+
+.sub-container {
+    text-align: center;
+    margin-top: 35px;
+}
+
+a {
+    color: #f24aa2;
+    font-weight: 600;
+}
+
+ion-card {
+    box-shadow: rgb(0 0 0 / 20%) 1px 1px 20px 2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px !important;
+    margin: 25px 0px 25px 0px;
+}
+
+ion-card-header {
+    background-color: #01A7FD;
+    height: 75px;
+    margin-bottom: 35px;
+    display: flex;
+}
+
+ion-card-title {
+    color: white;
+    letter-spacing: 1px;
+    padding: 0px 0px 0px 75px;
+    text-align: initial;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    bottom: 10px;
+}
+
+h3 {
+    margin: 0px;
+    font-weight: 600;
+}
+
+h5 {
+    margin: 0px;
+    font-weight: 600;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: initial;
+    color: black;
+    letter-spacing: 1px;
+}
+
+ion-textarea {
+    border-bottom: 1px solid grey;
+}
+
+.page-contents {
+    margin-top: 10px;
+    color: grey;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.submit-button {
+    text-transform: none;
+    --background: linear-gradient(to bottom, #F9A3C8 10%, #F24FA4 90%);
+    width: 140px;
+    font-weight: 600;
+    font-size: 16px;
+}

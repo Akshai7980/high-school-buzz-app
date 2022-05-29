@@ -1,0 +1,68 @@
+ion-content {
+    --background: linear-gradient(to right, #8a84ca, #9b94d2);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 10px;
+}
+
+.sub-container-profile {
+    text-align: center;
+    justify-content: center;
+    margin-top: 13px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid #00adef;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+
+.icon-img {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.icon-text {
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.inner-sub-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.vote-now-button {
+    text-transform: none;
+    --background: linear-gradient(to bottom, #8FDCFA 10%, #10B0EE 90%);
+    width: 150px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.icon-near-vote-now {
+    height: 50px;
+    margin-right: -60px;
+    position: relative;
+    left: 20px;
+}
+
+.media-img {
+    height: 110px;
+    width: 115px;
+    border-radius: 10px;
+    object-fit: cover;
+}

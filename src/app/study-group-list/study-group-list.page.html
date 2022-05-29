@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Study Group</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container" style="padding: 20px;">
+
+        <div style="background: url(../../assets/image/study-grp-btn.png);
+        margin: 5px 0px 23px 0px;
+        height: 45px;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: white;
+        font-family: 'Fredoka_One';">
+            <h5 style="margin: 0px;
+            position: relative;
+            top: 11px;">Create study Group</h5>
+        </div>
+
+        <div style="display: flex;
+        border-radius: 20px;
+        margin-bottom: 15px;" *ngFor="let s of StudyGroups; let i=index;" [style]="'background:' + colors[i%3]" (click)="openStudyChat(s)">
+            <div style="padding: 8px 12px 8px 8px;
+            border-right: 0.5px solid lightgrey;">
+                <div>
+                    <img [src]="GroupIcons[i%3]" alt="" style="height: 80px;">
+                </div>
+            </div>
+
+            <div style="padding: 0px 15px 0px 15px;">
+                <h5 style="margin-bottom: 15px; font-family: 'Fredoka_One';">{{s.group_name}}</h5>
+                <img [src]="GroupMembers[i%3]" alt="" style="height: 33px;"> <span style="margin-left: 10px; color: grey; font-size: 13px;"> +{{s.group_members_count}} members</span>
+            </div>
+
+            <div>
+                <ion-badge style="height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                text-align: center;
+                --background: linear-gradient(to right, #9676C2, #BA67B7);
+                --padding-top: 8px;
+                position: relative;
+                top: 30px;"> {{s.message_count}} </ion-badge>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-content>

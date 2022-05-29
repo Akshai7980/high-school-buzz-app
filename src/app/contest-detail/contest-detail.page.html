@@ -1,0 +1,167 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Contest</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <ion-card style="padding: 10px; border-radius: 10px; box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px 2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px !important" *ngIf="ContestDetails!==''">
+            <div style="display: flex;
+            justify-content: space-between;
+            align-items: center;">
+
+                <div style="display: flex;
+              align-items: center;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 35px;
+                  margin-right: 8px;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 20px;
+                  margin-right: 5px;">
+                    <span style="font-family: 'PT_Sans_Bold';
+                  color: #03AAEE;">Ends: {{ContestDetails[0].end_date}}</span>
+                </div>
+
+                <div style="display: flex;">
+                    <div>
+                        <p style="margin: 0px;
+                    color: black;
+                    font-family: 'PT_Sans_Bold';
+                    letter-spacing: 1px;"> {{ContestDetails[0].user_name}} </p>
+                        <p style="margin: 0px;
+                        font-size: 11px;
+                        letter-spacing: .5px;
+                        font-family: PT_Sans_Regular;
+                        float: right;">{{ContestDetails[0].school}}</p>
+                    </div>
+
+                    <div>
+                        <img [src]="ContestDetails[0].profile_pic" alt="" style="border-radius: 50%;
+                        height: 40px;
+                        width: 40px;
+                        object-fit: cover;
+                        border: 2px solid #9e9e9e;
+                        margin-left: 5px;">
+                    </div>
+                </div>
+
+            </div>
+
+            <H3 style="margin: 16px 0px 0px 0px;
+            font-family: 'Fredoka_One';
+            color: black;
+        ">{{ContestDetails[0].contest_caption}}</H3>
+
+            <ion-card-content style="font-family: 'PT_Sans_Regular';
+            font-size: 12px;
+            letter-spacing: .5px;">
+                {{ContestDetails[0].contest_description}}
+            </ion-card-content>
+
+            <div style="display: flex;
+            justify-content: space-evenly;">
+                <div style="align-items: center;
+                display: flex;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 25px; margin-right: 5px;"> <span style="font-family: 'PT_Sans_Regular';
+                    font-size: 12px;
+                    letter-spacing: .5px;">{{ContestDetails[0].votes_count}} Votes</span>
+                </div>
+
+                <div style="align-items: center;
+                display: flex;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 25px; margin-right: 5px;"> <span style="font-family: 'PT_Sans_Regular';
+                    font-size: 12px;
+                    letter-spacing: .5px;">{{ContestDetails[0].participants_count}} Participants</span>
+                </div>
+
+                <div style="align-items: center;
+                display: flex;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 25px; margin-right: 5px;"> <span style="font-family: 'PT_Sans_Regular';
+                    font-size: 12px;
+                    letter-spacing: .5px;">{{ContestDetails[0].contest_status}}</span>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <ion-button style="text-transform: none;
+                --background: linear-gradient(to bottom, #f779bbb0 10%, #F14CA4 70%);
+                font-family: 'PT_Sans_Bold';
+                font-weight: 600;
+                --padding-start: 30px;
+                --padding-end: 30px;" shape="round">Join Now</ion-button>
+            </div>
+        </ion-card>
+
+        <div style="display: flex;
+        justify-content: space-between;
+        margin-top: 23px;">
+            <H4 style="font-family: 'Fredoka_One';
+            margin: 0px;">Top Players</H4>
+            <ion-searchbar placeholder="" mode="ios" style="border-radius: 30px;
+            height: 30px;
+            border: 1px solid grey;
+            width: 145px;
+            --background: transparent;"></ion-searchbar>
+        </div>
+
+        <ion-card style="display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;
+        padding: 8px 0px 8px 0px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px 1px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px !important" *ngFor="let players of TopPlayers; let i = index;">
+            <div style="display: flex;
+            align-items: center;">
+                <H1 style="color: #03ACEF;
+                font-family: 'PT_Sans_Bold';">#{{i+1}}</H1>
+            </div>
+
+            <div style="display: flex;
+            align-items: center;">
+                <div>
+                    <img [src]="players.profile_pic" alt="" style="height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 2px solid #03ACEF;
+                    margin-right: 5px;">
+                </div>
+
+                <div>
+                    <p style="margin: 0px;
+                    color: black;
+                    font-family: 'Fredoka_One';
+                    font-size: 15px;"> {{players.user_name}} </p>
+                    <p style="margin: 0px;
+                    font-size: 12px;
+                    font-family: 'PT_Sans_Regular';"> {{players.school}} </p>
+                </div>
+
+            </div>
+
+            <div style="align-items: center;
+            display: flex;">
+                <img src="../../assets/image/img1.png" alt="" style="height: 23px; margin-right: 5px;"> <span style="color: black;
+                font-family: 'PT_Sans_Regular';
+                font-size: 12px;"> {{players.comments}} </span>
+            </div>
+
+            <div>
+                <H1 style="margin: 0px;
+                color: #04ADF0;
+                font-family: 'PT_Sans_Bold';
+                font-size: 17px;"> {{players.votes}} </H1>
+                <p style="margin: 0px;
+                font-family: 'PT_Sans_Regular';">VOTES</p>
+            </div>
+
+        </ion-card>
+
+    </div>
+
+</ion-content>

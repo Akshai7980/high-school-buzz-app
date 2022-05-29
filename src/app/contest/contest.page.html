@@ -1,0 +1,104 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Contest</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <div style="text-align: right;">
+            <ion-button shape="round" size="small" style="text-transform: none;
+            --padding-start: 18px;
+            --padding-end: 18px;
+            font-family: 'Fredoka_One';
+            font-size: 14px;
+            --background: linear-gradient(to bottom, #fd94ccb8 10%, #F34CA4 90%);">
+                <ion-icon name="add"></ion-icon>
+                Add</ion-button>
+        </div>
+
+        <div style="border-left: 1px solid grey;
+        padding: 0px 0px 0px 20px; margin-bottom: -5px;" *ngFor="let contest of ContestDetails; let i = index;">
+            <ul style="margin: 5px;
+            position: relative;
+            right: 40px;
+            font-size: 40px;
+            color: grey;">
+                <li> <span style="font-size: 14px;
+                    font-family: 'PT_Sans_Bold';
+                    position: relative;
+                    bottom: 8px;
+                    right: 15px;"> {{contest.date}} </span> </li>
+            </ul>
+            <div style="display: flex;
+            justify-content: space-between;
+            box-shadow: 1px 1px 5px 4px lightgrey;
+            border-radius: 7px;
+            padding: 10px;">
+                <div>
+                    <img src="../../assets/image/trophy.png" alt="" style="height: 70px;
+                    width: 70px;
+                    object-fit: cover;">
+                </div>
+
+                <div>
+                    <H6 style="margin: 0px 0px 15px 0px;
+                    font-family: Fredoka_One;"> {{contest.contest_name}} </H6>
+
+                    <div style="display: flex;
+                    align-items: center;
+                    justify-content: space-between;">
+                        <div style="display: flex; align-items: center;">
+                            <img src="../../assets/image/badge-c1.png" alt="" style="height: 20px;
+                            width: 20px;
+                            object-fit: cover;
+                            margin-right: 5px;"> <span> {{contest.votes}} Votes</span>
+                        </div>
+
+                        <div style="display: flex; align-items: center;" *ngIf="contest.contest_status === 'Ongoing' ">
+                            <img src="../../assets/image/time.png" alt="" style="height: 20px;
+                            width: 20px;
+                            object-fit: cover; margin-right: 5px;"> <span> {{contest.contest_status}} </span>
+                        </div>
+
+                        <div style="display: flex; align-items: center;" *ngIf="contest.contest_status === 'Expired' ">
+                            <img src="../../assets/image/expirered.png" alt="" style="height: 20px;
+                            width: 20px;
+                            object-fit: cover; margin-right: 5px;"> <span> {{contest.contest_status}} </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display: flex;
+                align-items: center;">
+                    <img src="../../assets/image/arrow.png" alt="" style="height: 19px;">
+                </div>
+            </div>
+
+            <ion-progress-bar *ngIf="contest.progress >= 50 && contest.progress !== 100" [value]="contest.progress/100" style="border-radius: 0px 0px 20px 20px;
+            margin: -1px 1px 0px 1px;
+            --progress-background: #F58106;
+            --background: lightgrey;"></ion-progress-bar>
+
+            <ion-progress-bar *ngIf="contest.progress === 100 " [value]="contest.progress/100" style="border-radius: 0px 0px 20px 20px;
+margin: -1px 1px 0px 1px;
+--progress-background: #02AE1A;
+--background: lightgrey;"></ion-progress-bar>
+
+            <ion-progress-bar *ngIf="contest.progress < 50 && contest.progress !== 50" [value]="contest.progress/100" style="border-radius: 0px 0px 20px 20px;
+margin: -1px 1px 0px 1px;
+--progress-background: #F80517;
+--background: lightgrey;"></ion-progress-bar>
+        </div>
+
+
+    </div>
+
+</ion-content>

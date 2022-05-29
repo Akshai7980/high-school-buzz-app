@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Facts and Hacks</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <div class="heading-container">
+            <h4 class="heading">Today's Facts & Hacks</h4>
+            <ion-button shape="round" size="small" class="add-button">
+                <ion-icon slot="icon-only" name="add" class="add-button-icon"></ion-icon> Add </ion-button>
+        </div>
+
+        <div class="looping-container" *ngFor="let facts of FactsHacks; let i = index">
+            <div class="main-img-container">
+                <img [src]="facts.main_img" alt="" class="main-img">
+            </div>
+            <div>
+                <h6 class="heading-text">{{facts.heading}}</h6>
+                <div class="profile-details-main-container">
+                    <div class="profile-details-first-sub-container">
+                        <img [src]="facts.profile_pic" alt="" class="user-profile-img">
+                    </div>
+                    <div class="user-details-text-container">
+                        <p class="user-name-text">{{facts.user_name}}</p>
+                        <p class="user-school-name">{{facts.school}}</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ion-icon name="chevron-forward" class="chevron-forward-icon"></ion-icon>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Contest</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <div style="text-align: center">
+            <div class="sub-container-profile">
+                <img src="../../assets/image/Sample_Images/1.jpeg" alt="" class="profile-img">
+                <p class="user-name">Chirag Prajapati</p>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img src="../../assets/image/msg1.png" alt="" class="icon-img">
+                <span class="icon-text">800 Votes</span>
+                <img src="../../assets/image/msg1.png" alt="" class="icon-img">
+                <span class="icon-text">4.5k Comments</span>
+            </div>
+
+            <div class="inner-sub-container">
+                <ion-button shape="round" class="vote-now-button">VOTE NOW</ion-button>
+                <img src="../../assets/image/msg1.png" alt="" class="icon-near-vote-now">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; margin-top: 10px; justify-content: center;">
+            <div style="margin: 3px;" *ngFor="let contest of ContestDetails;">
+                <img [src]="contest.img" alt="" class="media-img">
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-content>

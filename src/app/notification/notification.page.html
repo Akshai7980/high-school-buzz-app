@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Notification</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+        <div class="looping-sub-container" *ngFor="let notch of Notifications">
+            <div style="width: 25%; margin-right: 20px;">
+                <img src="../../assets/image/msg1.png" alt="">
+            </div>
+            <div>
+                <p> {{notch.time}} </p>
+                <h6> {{notch.text}} </h6>
+                <span> {{notch.sub_text}} </span>
+            </div>
+        </div>
+    </div>
+
+
+</ion-content>

@@ -1,0 +1,101 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Birthday Shout Out</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+
+        <div style="display: flex; justify-content: space-between;">
+            <ion-button shape="round" size="small" style="    --background: linear-gradient(to bottom, #8FDCFA 10%, #10B0EE 90%);
+            position: relative;
+    height: 30px;
+            ">INVITES</ion-button>
+            <ion-searchbar animated mode="ios" style="border: 1px solid lightgrey;
+            border-radius: 20px;
+            height: 34px;
+            position: relative;
+    top: 2px;
+            --background: white;
+            padding: 0px 0px 0px 40px;"></ion-searchbar>
+            <ion-button shape="round" size="small" style="    --background: linear-gradient(to bottom, #F779BB 10%, #F14CA4 90%);
+            position: relative;
+    height: 30px;
+            ">INVITATIONS</ion-button>
+        </div>
+
+        <div style="text-align: center;">
+            <ion-card style="margin-top: 15px; text-align: center; justify-content: center; padding: 10px 0px 25px 0px; border-radius: 10px; box-shadow: rgb(0 0 0 / 20%) 0px 3px 10px 3px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5p !important;">
+                <img src="../../assets/image/Sample_Images/1.jpeg" alt="" style="height: 85px;
+                border-radius: 50%;
+                width: 85px;
+                object-fit: cover;
+                border: 2px solid #10b0ee;">
+                <H2 style="color: #04ACED; font-family: Fredoka_One; margin: 5px;">Victor</H2>
+                <H2 style="color: #333333; font-family: Fredoka_One; margin: 5px;">Happy Birthday Victor!</H2>
+            </ion-card>
+            <ion-button shape="round" size="small" style="position: relative;
+            bottom: 26px;
+            --background: linear-gradient(to left, #BE5FB1 10%, #10B0EE 90%);
+            height: 35px;
+            --padding-end: 15px;
+            --padding-start: 15px;
+            font-family: 'Fredoka_One';
+            text-transform: none;">
+                <ion-icon name="add"></ion-icon>
+                Upload Album
+            </ion-button>
+        </div>
+
+        <div>
+            <ion-textarea placeholder="Enter Comments" style="border: 0.5px solid lightgrey; border-radius: 10px;"></ion-textarea>
+            <ion-button shape="round" size="small" fill="outline" style="float: right;
+            --color: #10b0ee;
+            --border-color: #10b0ee;
+            --padding-start: 20px;
+            margin-top: 10px;
+            --padding-end: 20px;">SEND</ion-button>
+        </div>
+
+        <div style="margin-top: 35px;">
+            <H4 style="font-family: 'Fredoka_One';">Co-Celebrants</H4>
+
+            <div style="display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;">
+                <div style="padding: 20px;
+                text-align: center;
+                border-radius: 20px;
+                margin-bottom: 15px;
+                border: .5px solid lightgrey;" *ngFor="let celeb of Celebrants; let i = index;">
+                    <img [src]="celeb.profile_img" alt="" style="height: 70px;
+                    width: 70px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 1.5px solid #04ACED;">
+                    <p style="margin: 0px;
+                    font-family: Fredoka_One;
+                    color: #2B3238;"> {{celeb.user_name}} </p>
+                    <p style="margin: 0px;
+                    color: grey;
+                    font-style: oblique;
+                    font-size: 12px;"> {{celeb.Bday_wish}} </p>
+
+                    <div style="display: flex; margin-top: 8px;">
+                        <img src="../../assets/image/ic-1.png" alt="" style="height:20px;"> <span style="font-size: 12px;"> {{celeb.like_count}} </span>
+                        <img src="../../assets/image/ic-1.png" alt="" style="height:20px;"> <span style="font-size: 12px;"> {{celeb.comment_count}} </span>
+                        <img src="../../assets/image/ic-1.png" alt="" style="height:20px;"> <span style="font-size: 12px;"> {{celeb.wish_count}} </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-content>

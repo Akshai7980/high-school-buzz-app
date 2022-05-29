@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Report Abuse</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main-container">
+        <h3> Schedule a issue </h3>
+        <p class="page-contents"> {{this.ReportAbuse[0]?.text}}</p>
+        <p class="page-contents"> {{this.ReportAbuse[0]?.text}}</p>
+        <p class="page-contents"> {{this.ReportAbuse[0]?.text}}</p>
+
+        <h5>What type of issue are you facing?</h5>
+
+        <div class="sub-container">
+            <a href="#">CHOOSE A DIFFERENT ISSUES</a>
+
+            <ion-card>
+                <ion-card-header>
+                    <img src="../../assets/image/msg1.png" alt="">
+                    <ion-card-title> Compensation and Role Change </ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <h6>Tell us more about this issues</h6>
+
+                    <ion-textarea type="text" autocapitalize="true" autoGrow="true"></ion-textarea>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-button shape="round" class="submit-button">Submit</ion-button>
+        </div>
+    </div>
+
+</ion-content>

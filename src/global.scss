@@ -1,0 +1,80 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+// ----- Font Family or Font Style for entire App -----
+@font-face {
+    font-family: Fredoka_One;
+    src: url("../src/assets/fonts/Fredoka_One/FredokaOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: PT_Sans_Regular;
+    src: url("../src/assets/fonts/PT_Sans/PTSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: PT_Sans_Bold;
+    src: url("../src/assets/fonts/PT_Sans/PTSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: PT_Sans_Italic;
+    src: url("../src/assets/fonts/PT_Sans/PTSans-Italic.ttf");
+}
+
+@font-face {
+    font-family: PT_Sans_Bold_Italic;
+    src: url("../src/assets/fonts/PT_Sans/PTSans-BoldItalic.ttf");
+}
+
+// ----- Font Family or Font Style for entire App -----
+//Toolbar design for entire app
+ion-toolbar {
+    height: 68px;
+    --background: url('../src/assets/image/tool.jpg');
+}
+
+//Title design for entire app
+ion-title {
+    text-align: center;
+    font-family: Fredoka_One;
+    font-size: 25px;
+    color: #FBFBFB;
+    // font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    right: 20px;
+    top: 5px;
+    text-shadow: 1px 2px #3f48ed;
+}
+
+ion-back-button {
+    color: white;
+}

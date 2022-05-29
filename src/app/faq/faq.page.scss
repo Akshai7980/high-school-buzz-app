@@ -1,0 +1,42 @@
+ion-content {
+    --background: linear-gradient(to right, #8a84ca, #9b94d2);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 10px;
+}
+
+ion-button {
+    text-transform: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.inactive-button {
+    color: black;
+}
+
+.active-button {
+    --background: #00adef;
+}
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .5px solid lightgray;
+}
+
+.arrow-icon {
+    position: relative;
+    top: 15px;
+    font-size: 1.5rem;
+}
+
+.answer-text {
+    color: grey;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 3px;
+}

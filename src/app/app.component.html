@@ -1,0 +1,51 @@
+<ion-app>
+    <ion-split-pane contentId="main-content">
+        <ion-menu contentId="main-content" type="overlay">
+            <ion-content>
+                <div style="padding: 25px 0px 30px 0px;
+                display: flex;
+                align-items: center;">
+                    <div style="width: 100px;
+                    text-align: end;
+                    background: #39ABF2;
+                    padding: 7px 7px 7px 0px;
+                    border-radius: 0px 40px 40px 0px;">
+                        <img src="../assets/image/Sample_Images/11.jpeg" alt="" style="border-radius: 50%;
+                        height: 70px;
+                        width: 70px;
+                        object-fit: cover;
+                        border: 2px solid white;">
+                    </div>
+                    <div style="margin-left: 15px;
+                    color: white;">
+                        <H4 style="margin: 0px 0px 5px 0px;
+                        font-family: 'Fredoka_One';">Abayomi Axton</H4>
+                        <p style="margin: 0px;
+                        font-family: 'PT_Sans_Bold';
+                        font-size: 13px;">10 B, King Edward High School</p>
+                    </div>
+
+                </div>
+                <ion-list id="inbox-list" style="background: transparent;">
+                    <!-- <ion-list-header>iMatch</ion-list-header> -->
+                    <!-- <ion-searchbar class="menu-searchbar" color="warning"></ion-searchbar> -->
+                    <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index; ">
+                        <ion-item (click)="openPage(i)" routerDirection="root" lines="none" detail="false" style="--background: transparent;">
+                            <img class="menu-icons" style="height: 21px;
+                            margin-right: 15px;" [src]="p.img" />
+                            <!-- <ion-icon color="light" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"> -->
+                            <ion-label style="color: white;
+                            font-family: 'PT_Sans_Bold';
+                            font-size: 17px;
+                            letter-spacing: 1px;">{{ p.title }}</ion-label>
+                        </ion-item>
+
+                    </ion-menu-toggle>
+
+                </ion-list>
+
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>

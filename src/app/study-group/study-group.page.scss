@@ -1,0 +1,42 @@
+ion-content {
+    --background: linear-gradient(to right, #8a84ca, #9b94d2);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    height: -webkit-fill-available;
+    padding: 10px;
+}
+
+h4 {
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+ion-input {
+    --placeholder-color: black;
+    font-weight: 600;
+    border: 0.5px solid #9e9e9ea6;
+    border-radius: 30px;
+    --padding-start: 15px;
+    margin-bottom: 15px;
+}
+
+ion-textarea {
+    --placeholder-color: black;
+    font-weight: 600;
+    border: 0.5px solid #9e9e9ea6;
+    border-radius: 15px;
+    --padding-start: 15px;
+    margin-bottom: 15px;
+    height: 125px;
+}
+
+.invite-button {
+    text-transform: none;
+    --background: linear-gradient(to bottom, #8FDCFA 10%, #10B0EE 90%);
+    width: 150px;
+    font-weight: 600;
+    font-size: 16px;
+}

@@ -1,0 +1,98 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Learning Curve</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content-bg">
+
+    <div style="background: #04ABEF;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;">
+        <H4 style="color: white;
+        font-family: PT_Sans_Bold;
+        letter-spacing: .5px;
+        margin: 0px;">Ask a Question</H4>
+    </div>
+
+    <div class="main-container">
+        <ion-searchbar placeholder="search..." style="--border-radius: 25px;
+        --box-shadow: 1px 1px 10px 0px grey;"></ion-searchbar>
+
+        <div style="padding: 10px 0px 10px 10px;">
+            <img src="../../assets/image/img1.png" alt="" style="height: 30px;
+            width: 30px;">
+        </div>
+
+        <div>
+            <ion-card style="
+        position: absolute; 
+        box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px 3px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px !important;
+        border-radius: 20px;" *ngFor="let l of LearningCurveCard">
+                <div style="padding: 15px;">
+                    <div style="text-align: right;"> <span> {{l.time_ago}} </span> </div>
+                    <ion-card-header>
+                        <ion-card-title style="font-family: 'Fredoka_One';
+                font-size: 23px;"> {{l.question}} </ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+
+                        <div style="padding: 2px 30px 2px 30px;
+                background-color: #D5F1FC;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;">
+                            <p style="color: #04ABEF;
+                    font-family: 'PT_Sans_Bold';
+                    font-size: 19px;"> 0{{l.answers_count}} ANSWERS </p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <img [src]="l.profile_pic" alt="" style="height: 60px;
+                        width: 60px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 2px solid #16b1f0;">
+                            <p style="margin: 0px;
+                    font-size: 18px;
+                    font-family: 'PT_Sans_Bold';
+                    color: black;"> {{l.asked_user}} </p>
+                            <p style="margin: 0px;
+                    font-family: 'PT_Sans_Regular';
+                    color: black;"> {{l.school}} </p>
+                        </div>
+
+                    </ion-card-content>
+                </div>
+
+                <div style="display: flex;
+            align-items: center;
+            background-color: #F24AA2;
+            justify-content: center;
+            padding: 10px;">
+                    <img src="../../assets/image/img1.png" alt="" style="height: 35px;
+                width: 35px;
+                margin-right: 10px;">
+                    <H4 style="margin: 0px;
+                color: white;
+                font-family: 'Fredoka_One';">ANSWER</H4>
+                </div>
+            </ion-card>
+        </div>
+
+        <!-- <div>
+            <ion-progress-bar [value]="LearningCurveCard?.length"></ion-progress-bar>
+        </div> -->
+
+    </div>
+
+</ion-content>

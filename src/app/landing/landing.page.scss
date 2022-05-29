@@ -1,0 +1,29 @@
+.class-name {
+    --background: #fff url('../../assets/image/landing-bg.png') no-repeat center center / cover;
+}
+
+.logo-container {
+    padding: 50px 50px 0px 50px;
+}
+
+.logo-img {
+    position: relative;
+    top: 50px;
+}
+
+.button-container {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+}
+
+.start-now-button {
+    text-transform: none;
+    --padding-start: 30px;
+    --padding-end: 30px;
+    height: 45px;
+    font-size: 20px;
+    font-family: 'Fredoka_One';
+    --background: linear-gradient(to bottom, #FD94CC 10%, #F34CA4 90%);
+}

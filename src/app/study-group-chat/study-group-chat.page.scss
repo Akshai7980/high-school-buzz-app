@@ -1,0 +1,17 @@
+.header-bg-img {
+    background: url(../../assets/image/-study-grp-chat-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset;
+    padding: 5px;
+}
+
+ion-content {
+    --background: linear-gradient(to right, #429bdd, #429cdd);
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 10px;
+}

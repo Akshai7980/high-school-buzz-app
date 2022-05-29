@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+    <!-- <ion-toolbar> -->
+    <div class="header-img-container">
+        <div style="display: flex;">
+            <!-- <div> -->
+            <ion-buttons slot="start">
+                <ion-back-button style="color: white" icon="arrow-back"></ion-back-button>
+            </ion-buttons>
+            <!-- </div> -->
+
+            <!-- <div> -->
+            <ion-title>Contact Us</ion-title>
+            <!-- </div> -->
+        </div>
+    </div>
+    <!-- </ion-toolbar> -->
+</ion-header>
+
+<ion-content class="has-header">
+
+    <div>
+        <ion-card class="contact-detail-card">
+            <div class="card-top-container">
+
+                <div style="display: flex;">
+                    <div class="card-top-sub-container">
+                        <!-- <ion-icon name="mail" style="color: #F24AA2;"></ion-icon> -->
+                        <img src="../../assets/image/contact-email.png" alt="" style="height: 16px;">
+                    </div>
+
+                    <div>
+                        <p class="card-top-container-heading-text">Email</p>
+                        <p class="card-top-container-info">info@hsb.com</p>
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="card-top-sub-container">
+                        <!-- <ion-icon name="mail" style="color: #F24AA2;"></ion-icon> -->
+                        <img src="../../assets/image/contact-phone.png" alt="" style="height: 25px;">
+                    </div>
+
+                    <div>
+                        <p class="card-top-container-heading-text">Phone</p>
+                        <p class="card-top-container-info">+91 9897969594</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="input-container">
+
+                <ion-input placeholder="Name" type="text" autocapitalize="true" class="input-field"></ion-input>
+                <ion-input placeholder="Email" type="email" autocapitalize="true" style="margin-top: 15px;" class="input-field"></ion-input>
+                <ion-textarea placeholder="Message" type="text" autocapitalize="true" autoGrow="true" style="margin-top: 15px;" class="input-field"></ion-textarea>
+
+            </div>
+
+        </ion-card>
+
+        <div style="text-align: center;">
+            <img src="../../assets/image/contact-sent.png" alt="" class="send-img-button">
+        </div>
+    </div>
+
+</ion-content>
